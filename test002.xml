@@ -1,1 +1,18 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="oled_cleardisplay" id="23" x="3" y="30">
+    <next>
+      <block type="controls_repeat" id="7" inline="true">
+        <value name="TIMES">
+          <block type="math_number" id="14">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="led_select" id="46" inline="true">
+            <field name="ACTION">FLASH</field>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>
