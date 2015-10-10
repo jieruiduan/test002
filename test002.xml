@@ -10,6 +10,16 @@
         <statement name="DO">
           <block type="led_select" id="46" inline="true">
             <field name="ACTION">FLASH</field>
+            <value name="LED">
+              <block type="math_number" id="62">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <next>
+              <block type="oled_color" id="55">
+                <field name="OBJECT">GREEN</field>
+              </block>
+            </next>
           </block>
         </statement>
       </block>
