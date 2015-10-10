@@ -6,29 +6,33 @@
       </block>
     </value>
     <next>
-      <block type="oled_cleardisplay" id="23">
+      <block type="movement_forward" id="90">
         <next>
-          <block type="controls_repeat" id="7" inline="true">
-            <value name="TIMES">
-              <block type="math_number" id="14">
-                <field name="NUM">10</field>
-              </block>
-            </value>
-            <statement name="DO">
-              <block type="led_select" id="46" inline="true">
-                <field name="ACTION">FLASH</field>
-                <value name="LED">
-                  <block type="math_number" id="62">
-                    <field name="NUM">1000</field>
+          <block type="oled_cleardisplay" id="23">
+            <next>
+              <block type="controls_repeat" id="7" inline="true">
+                <value name="TIMES">
+                  <block type="math_number" id="14">
+                    <field name="NUM">10</field>
                   </block>
                 </value>
-                <next>
-                  <block type="oled_color" id="55">
-                    <field name="OBJECT">GREEN</field>
+                <statement name="DO">
+                  <block type="led_select" id="46" inline="true">
+                    <field name="ACTION">FLASH</field>
+                    <value name="LED">
+                      <block type="math_number" id="62">
+                        <field name="NUM">1000</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="oled_color" id="55">
+                        <field name="OBJECT">GREEN</field>
+                      </block>
+                    </next>
                   </block>
-                </next>
+                </statement>
               </block>
-            </statement>
+            </next>
           </block>
         </next>
       </block>
