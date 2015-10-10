@@ -1,27 +1,36 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="oled_cleardisplay" id="23" x="3" y="30">
+  <block type="movement_leftmotor" id="73" inline="true" x="4" y="-6">
+    <value name="MOVLEFT">
+      <block type="math_number" id="80">
+        <field name="NUM">300</field>
+      </block>
+    </value>
     <next>
-      <block type="controls_repeat" id="7" inline="true">
-        <value name="TIMES">
-          <block type="math_number" id="14">
-            <field name="NUM">10</field>
-          </block>
-        </value>
-        <statement name="DO">
-          <block type="led_select" id="46" inline="true">
-            <field name="ACTION">FLASH</field>
-            <value name="LED">
-              <block type="math_number" id="62">
-                <field name="NUM">1000</field>
+      <block type="oled_cleardisplay" id="23">
+        <next>
+          <block type="controls_repeat" id="7" inline="true">
+            <value name="TIMES">
+              <block type="math_number" id="14">
+                <field name="NUM">10</field>
               </block>
             </value>
-            <next>
-              <block type="oled_color" id="55">
-                <field name="OBJECT">GREEN</field>
+            <statement name="DO">
+              <block type="led_select" id="46" inline="true">
+                <field name="ACTION">FLASH</field>
+                <value name="LED">
+                  <block type="math_number" id="62">
+                    <field name="NUM">1000</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="oled_color" id="55">
+                    <field name="OBJECT">GREEN</field>
+                  </block>
+                </next>
               </block>
-            </next>
+            </statement>
           </block>
-        </statement>
+        </next>
       </block>
     </next>
   </block>
